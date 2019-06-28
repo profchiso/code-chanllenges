@@ -1,0 +1,49 @@
+var n=12;
+var str="abcdefghigk";
+console.log(str.length);
+sliceStr=str.slice(3);
+console.log(sliceStr);
+var re=n-sliceStr.length;
+console.log(re);
+
+for(let h=0;h<str.length;h++){
+	console.log(str[re]);
+
+}
+
+
+
+
+
+
+
+let WArr=W.split("");
+  let newArr=[];
+  let indexOfchar,strSlice,lenOfStrSlice,leftchar,chr,el2;
+  for(let k=0;k<=WArr.length;k++){
+
+ indexOfchar=S.indexOf(WArr[0]);
+  strSlice=S.slice(indexOfchar);
+  lenOfStrSlice=strSlice.length;
+  leftchar=T-lenOfStrSlice;
+  chr=S[leftchar];
+  el2=S.indexOf(chr);
+    for(let i=0;i<S.length;i++){
+      if(WArr[0]==S[i]){
+
+        let indexOfElem=(S.indexOf(WArr[0]));
+        let elem= S[indexOfElem+T];
+
+       
+        if(elem!=""){
+                newArr.push(elem);
+                WArr.shift();
+        }else if(elem==undefined && leftchar<T){
+          newArr.push(S[el2]);
+          WArr.shift();
+
+        }
+      }
+    }
+  }
+  return newArr.join("").toString();
